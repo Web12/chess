@@ -114,8 +114,6 @@ function GetMoveSAN(move, validMoves) {
 	MakeMove(move);
 	if (g_inCheck) {
 	    result += GenerateValidMoves().length == 0 ? " [CheckMate]" : " [Check]";
-	    //alert( result );
-	   // $("#popupBasic").popup('open');
 	}
 	UnmakeMove(move);
 
