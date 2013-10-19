@@ -271,7 +271,7 @@ function RedrawPieces() {
                     }
                 }});
 */
-                $(divimg).tap(function(e) {
+                $(divimg).on('vclick', function(e) {
                     if (g_selectedPiece === null) {
                         var offset = $(this).closest('table').offset();
                         g_startOffset = {
