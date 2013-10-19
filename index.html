@@ -27,12 +27,6 @@
 	    });
     </script> 
       <style type="text/css">
-          #FenTextBox {
-              width: 400px;
-          }
-          #TimePerMove {
-              width: 50px;
-          }
           .no-highlight {
             -webkit-tap-highlight-color: rgba(0,0,0,0);
           }
@@ -48,6 +42,9 @@
           .sprite-queen_white{ background-position: 0 -855px; width: 35px; height: 35px; } 
           .sprite-rook_black{ background-position: 0 -950px; width: 35px; height: 35px; } 
           .sprite-rook_white{ background-position: 0 -1045px; width: 35px; height: 35px; }
+          .ui-panel-animate {
+    transition: transform 100ms ease 0s !important;
+}  
       </style>
 </head>
 <body onLoad="initFastButtons();"  id="fastclick">
@@ -56,12 +53,14 @@
 <div data-role="panel" id="mpanel" data-display="overlay">
     <!-- panel content goes here -->
 </div><!-- /panel -->
-<div data-role="header" id="header" data-position="fixed" data-theme="b"> 
+<div data-role="header" id="header" data-position="fixed" data-theme="e"> 
+<a href="#mpanel" data-icon="grid"  data-iconpos="notext" data-inline="true">Menu</a>
 	<h1>Chess</h1>
 </div>
 <div data-role="content">	
 <div align="center">
 <div id='board'></div>
+<textarea style="height:100%" id='PgnTextBox'></textarea>
         <div style="display:none;">
 <select onchange="javascript:UIChangeStartPlayer()">
 <option value="white">White</option>
@@ -72,7 +71,7 @@
         <div style="margin-top:5px;">
          
         <span id='output'></span><br/> 
-	    <textarea cols='50' rows='6' id='PgnTextBox'></textarea><br/>
+	    <br/>
         <div>
             <a id='AnalysisToggleLink' href="javascript:UIAnalyzeToggle()">Analysis: Off</a>
         </div>
@@ -83,12 +82,12 @@
      </div> 
 	
 </div>
-<div id="footer" data-role="footer" data-position="fixed" data-theme="b"> 
+<div id="footer" data-role="footer" data-position="fixed" data-theme="e"> 
 	<div data-role="navbar">
 		<ul>
 			<li><a href="javascript:UINewGame()">New game</a></li>
 			<li><a href="javascript:UIUndoMove()">Undo</a></li>
-			<li><a href="#about">About</a></li>
+			<li><a href="#mpanel">About</a></li>
 		</ul>
 	</div>
 </div>
