@@ -2,13 +2,13 @@
 <html>
   <head>
     <title>Device Properties Example</title>
-
+    <script src="phonegap.js"></script>
     <!--<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>-->
     <script type="text/javascript" charset="utf-8">
 
     // Wait for PhoneGap to load
     //
-    document.addEventListener("deviceready", onDeviceReady, false);
+   // document.addEventListener("deviceready", onDeviceReady, false);
 
     // PhoneGap is ready
     //
@@ -24,7 +24,8 @@
 
     </script>
   </head>
-  <body>
+  <body onload="onDeviceReady()">
     <p id="deviceProperties">Loading device properties...</p>
   </body>
 </html>
+  
