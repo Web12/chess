@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id = "com.web12.chess"
+        version = "0.0.1">
+    <name>Chess</name>
+    <description>
+        Chess
+    </description>
+    <author href="https://build.phonegap.com" email="info@web12.ru">
+        Harutyun Harutyunyan
+    </author>
+    <preference name="phonegap-version" value="3.0.0" />
+    <preference name="orientation" value="portrait" />
+    <gap:platform name="ios" />
+</widget>
