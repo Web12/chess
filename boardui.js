@@ -46,7 +46,7 @@ function UIAnalyzeToggle() {
         g_analyzing = !g_analyzing;
         document.getElementById("AnalysisToggleLink").innerText = g_analyzing ? "Analysis: On" : "Analysis: Off";
     } else {
-        alert("Your browser must support web workers for analysis - (chrome4, ff4, safari)");
+        //alert("Your browser must support web workers for analysis");
     }
 }
 
@@ -95,7 +95,7 @@ function FinishMove(bestMove, value, timeTaken, ply) {
     if (bestMove != null) {
         UIPlayMove(bestMove, BuildPVMessage(bestMove, value, timeTaken, ply));
     } else {
-        alert("Checkmate!");
+        //alert("Checkmate!");
     }
 }
 
