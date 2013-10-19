@@ -16,4 +16,5 @@
     <gap:splash src="splash.png" />
     <icon src="icon.png" />
     <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
 </widget>
