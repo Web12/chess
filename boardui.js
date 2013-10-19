@@ -180,7 +180,7 @@ function InitializeBackgroundEngine() {
     if (g_backgroundEngine == null) {
         g_backgroundEngineValid = true;
         try {
-            g_backgroundEngine = new Worker();
+            g_backgroundEngine = new Worker("garbochess.js");
             g_backgroundEngine.onmessage = function (e) {
                 if (e.data.match("^pv") == "pv") {
                     UpdatePVDisplay(e.data.substr(3, e.data.length - 3));
@@ -257,7 +257,7 @@ function RedrawPieces() {
                 img.height = g_cellSize;
                 var divimg = document.createElement("div");
                 divimg.appendChild(img);
-
+/*
                 $(divimg).draggable({ start: function (e, ui) {
                     if (g_selectedPiece === null) {
                         g_selectedPiece = this;
@@ -270,8 +270,8 @@ function RedrawPieces() {
                         return g_selectedPiece == this;
                     }
                 }});
-
-                $(divimg).mousedown(function(e) {
+*/
+                $(divimg).tap(function(e) {
                     if (g_selectedPiece === null) {
                         var offset = $(this).closest('table').offset();
                         g_startOffset = {
