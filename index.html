@@ -7,7 +7,7 @@
 <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />-->
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-
+<script src="fastclick.js"></script>
 <script type="text/javascript">
 $(document).bind("mobileinit", function() {
   $.mobile.defaultPageTransition = "none";
@@ -51,7 +51,7 @@ $(document).bind("mobileinit", function() {
           .sprite-rook_white{ background-position: 0 -1045px; width: 45px; height: 45px; }
       </style>
 </head>
-<body>
+<body onLoad="initFastButtons();"  id="fastclick">
 
 <div data-role="page" id="upload">
 <div data-role="panel" id="mpanel" data-display="overlay">
