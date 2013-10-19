@@ -83,7 +83,19 @@ function UpdatePgnTextBox(move) {
         pgnTextBox.value += moveNumber + ". ";
         moveNumber++;
     }
-    pgnTextBox.value += GetMoveSAN(move) + " ";
+    var ppp = GetMoveSAN(move);
+    pgnTextBox.value += ppp + " ";
+    
+	    var check_Check = ppp.indexOf("[Check]");
+	    var check_CheckMate = ppp.indexOf("[CheckMate]");
+	    
+	    console.log(ppp);
+	  
+	    if (check_Check != -1) {
+	      alert('Check');	      
+	    } else if (check_CheckMate != -1) {
+	      alert('CheckMate :)');	      
+	    }    
 }
 
 function UIChangeTimePerMove() {
@@ -95,7 +107,7 @@ function FinishMove(bestMove, value, timeTaken, ply) {
     if (bestMove != null) {
         UIPlayMove(bestMove, BuildPVMessage(bestMove, value, timeTaken, ply));
     } else {
-        //alert("Checkmate!");
+        alert("Checkmate!");
     }
 }
 
@@ -168,7 +180,7 @@ function InitializeBackgroundEngine() {
     if (g_backgroundEngine == null) {
         g_backgroundEngineValid = true;
         try {
-            g_backgroundEngine = new Worker("garbochess.js");
+            g_backgroundEngine = new Worker();
             g_backgroundEngine.onmessage = function (e) {
                 if (e.data.match("^pv") == "pv") {
                     UpdatePVDisplay(e.data.substr(3, e.data.length - 3));
