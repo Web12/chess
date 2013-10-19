@@ -24,24 +24,32 @@
     
     // Show a custom alert
     //
+
+function alertDismissed() {
+    // do something
+    alert('ok');
+}
+
+
     function showAlert() {
-        navigator.notification.alert(
-            'You are the winner!',  // message
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
+navigator.notification.alert(
+    'You are the winner!',  // message
+    alertDismissed,         // callback
+    'Game Over',            // title
+    'Done'                  // buttonName
+);
     }
 
     // Beep three times
     //
     function playBeep() {
-        navigator.notification.beep(3);
+        navigator.notification.beep(1);
     }
 
     // Vibrate for 2 seconds
     //
     function vibrate() {
-        navigator.notification.vibrate(2000);
+        navigator.notification.vibrate();
     }
     
 
