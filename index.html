@@ -36,18 +36,18 @@
           .no-highlight {
             -webkit-tap-highlight-color: rgba(0,0,0,0);
           }
-          .sprite-bishop_black{ background-position: 0 0; width: 35px; height: 35px; } 
-          .sprite-bishop_white{ background-position: 0 -95px; width: 35px; height: 35px; } 
-          .sprite-king_black{ background-position: 0 -190px; width: 35px; height: 35px; } 
-          .sprite-king_white{ background-position: 0 -285px; width: 35px; height: 35px; } 
-          .sprite-knight_black{ background-position: 0 -380px; width: 35px; height: 35px; } 
-          .sprite-knight_white{ background-position: 0 -475px; width: 35px; height: 35px; } 
-          .sprite-pawn_black{ background-position: 0 -570px; width: 35px; height: 35px; } 
-          .sprite-pawn_white{ background-position: 0 -665px; width: 35px; height: 35px; } 
-          .sprite-queen_black{ background-position: 0 -760px; width: 35px; height: 35px; } 
-          .sprite-queen_white{ background-position: 0 -855px; width: 35px; height: 35px; } 
-          .sprite-rook_black{ background-position: 0 -950px; width: 35px; height: 35px; } 
-          .sprite-rook_white{ background-position: 0 -1045px; width: 35px; height: 35px; }
+          .sprite-bishop_black{ background-position: -5px -5px; width: 35px; height: 35px; } 
+          .sprite-bishop_white{ background-position: -5px -100px; width: 35px; height: 35px; } 
+          .sprite-king_black{ background-position: -5px -195px; width: 35px; height: 35px; } 
+          .sprite-king_white{ background-position: -5px -290px; width: 35px; height: 35px; } 
+          .sprite-knight_black{ background-position: -5px -385px; width: 35px; height: 35px; } 
+          .sprite-knight_white{ background-position: -5px -480px; width: 35px; height: 35px; } 
+          .sprite-pawn_black{ background-position: -5px -575px; width: 35px; height: 35px; } 
+          .sprite-pawn_white{ background-position: -5px -670px; width: 35px; height: 35px; } 
+          .sprite-queen_black{ background-position: -5px -765px; width: 35px; height: 35px; } 
+          .sprite-queen_white{ background-position: -5px -860px; width: 35px; height: 35px; } 
+          .sprite-rook_black{ background-position: -5px -955px; width: 35px; height: 35px; } 
+          .sprite-rook_white{ background-position: -5px -1050px; width: 35px; height: 35px; }
           .ui-panel-animate {
     transition: transform 100ms ease 0s !important;
 }  
@@ -57,13 +57,15 @@
 
 <div data-role="page" id="main">
 <div data-role="header" id="header" data-position="fixed" data-theme="a"> 
-<a href="#mpanel" data-icon="grid"  data-iconpos="notext" data-inline="true">Menu</a>
 	<h1>Chess</h1>
 </div>
 <div data-role="content">	
 <div align="center">
+<div data-role="popup" id="popupBasic">
+<p>This is a completely basic popup, no options set.</p>
+</div>
 <div id='board'></div>
-<textarea style="height:100%" id='PgnTextBox'></textarea>
+<textarea style="height:100px;" id='PgnTextBox' readonly></textarea>
         <div style="display:none;">
 <select onchange="javascript:UIChangeStartPlayer()">
 <option value="white">White</option>
