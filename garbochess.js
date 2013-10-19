@@ -113,7 +113,9 @@ function GetMoveSAN(move, validMoves) {
 
 	MakeMove(move);
 	if (g_inCheck) {
-	    result += GenerateValidMoves().length == 0 ? "#" : "+";
+	    result += GenerateValidMoves().length == 0 ? " [CheckMate]" : " [Check]";
+	    //alert( result );
+	   // $("#popupBasic").popup('open');
 	}
 	UnmakeMove(move);
 
@@ -143,7 +145,7 @@ function GetMoveFromString(moveString) {
             return moves[i];
         }
     }
-    alert("busted! ->" + moveString + " fen:" + GetFen());
+    //alert("busted! ->" + moveString + " fen:" + GetFen());
 }
 
 function PVFromHash(move, ply) {
