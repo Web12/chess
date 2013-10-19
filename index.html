@@ -27,6 +27,12 @@
 	    });
     </script> 
       <style type="text/css">
+       html, body, #board {
+       -webkit-user-select: none;
+       }
+       #main {
+       background:url('http://www.sunhome.ru/UsersGallery/wallpapers/89/shahmati-oboi-na-rabochii-stol.jpg');
+       }
           .no-highlight {
             -webkit-tap-highlight-color: rgba(0,0,0,0);
           }
@@ -49,11 +55,8 @@
 </head>
 <body onLoad="initFastButtons();"  id="fastclick">
 
-<div data-role="page" id="upload">
-<div data-role="panel" id="mpanel" data-display="overlay">
-    <!-- panel content goes here -->
-</div><!-- /panel -->
-<div data-role="header" id="header" data-position="fixed" data-theme="e"> 
+<div data-role="page" id="main">
+<div data-role="header" id="header" data-position="fixed" data-theme="a"> 
 <a href="#mpanel" data-icon="grid"  data-iconpos="notext" data-inline="true">Menu</a>
 	<h1>Chess</h1>
 </div>
@@ -82,7 +85,7 @@
      </div> 
 	
 </div>
-<div id="footer" data-role="footer" data-position="fixed" data-theme="e"> 
+<div id="footer" data-role="footer" data-position="fixed" data-theme="a"> 
 	<div data-role="navbar">
 		<ul>
 			<li><a href="javascript:UINewGame()">New game</a></li>
