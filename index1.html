@@ -33,6 +33,7 @@ html, body, #board {
     transition: transform 100ms ease 0s !important;
 }  
 </style>
+<script src="phonegap.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="fastclick.js"></script>
 <script type="text/javascript">
@@ -52,6 +53,15 @@ html, body, #board {
 	        g_timeout = 1000;
 	        UINewGame();
 	    });
+	    
+	    function showAlert() {
+			navigator.notification.alert(
+    			'Game Over',
+    			function(){ },
+    			'CheckMate!',
+    			'Done'
+	                 );
+    	    }
     </script> 
 </head>
 <body onLoad="initFastButtons();"  id="fastclick">
