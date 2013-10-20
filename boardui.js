@@ -92,9 +92,10 @@ function UpdatePgnTextBox(move) {
 	    console.log(ppp);
 	  
 	    if (check_Check != -1) {
-	      alert('Check');	      
+	      //alert('Check');	      
 	    } else if (check_CheckMate != -1) {
-	      alert('CheckMate :)');	      
+	      //alert('CheckMate :)');	      
+	      showAlert();
 	    }    
 }
 
